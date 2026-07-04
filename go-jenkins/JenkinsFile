@@ -7,7 +7,7 @@ pipeline {
    }
    environment {
        DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-       DOCKER_IMAGE = 'ephraimaudu/test-app'
+       DOCKER_IMAGE = 'ayushmehta1/test-app'
        GITHUB_CREDENTIALS = 'git-secret'
        SONAR_TOKEN = credentials('SONAR_TOKEN')
    }
@@ -17,7 +17,7 @@ pipeline {
        stage('Checkout'){
            steps{
                echo "checking out repo"
-               git url: 'https://github.com/audu97/test-project', branch: 'master',
+               git url: 'https://github.com/ayushmehta03/test-project', branch: 'master',
                credentialsId: "${GITHUB_CREDENTIALS}"
            }
        }
